@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cortex Commerce</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#14b8a6', // teal-500
+              'primary-focus': '#0d9488', // teal-600
+              'primary-content': '#ffffff',
+              secondary: '#6366f1', // indigo-500
+              'base-100': '#1f2937', // gray-800
+              'base-200': '#374151', // gray-700
+              'base-300': '#4b5563', // gray-600
+              'base-content': '#f9fafb', // gray-50
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @keyframes shimmer-reveal {
+        to {
+          transform: translateX(100%);
+        }
+      }
+      .shimmer-wrapper::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          100deg,
+          rgba(255, 255, 255, 0) 20%,
+          rgba(255, 255, 255, 0.2) 50%,
+          rgba(255, 255, 255, 0) 80%
+        );
+        transform: translateX(-100%);
+        animation: shimmer-reveal 1.5s ease-out;
+      }
+      .animate-spin-slow {
+        animation: spin 3s linear infinite;
+      }
+       @keyframes profit-glow {
+        0%, 100% {
+          box-shadow: 0 0 5px rgba(74, 222, 128, 0);
+          transform: scale(1);
+        }
+        50% {
+          box-shadow: 0 0 20px rgba(74, 222, 128, 0.7);
+          transform: scale(1.02);
+        }
+      }
+      .profit-highlight {
+        animation: profit-glow 0.5s ease-in-out;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.16.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body class="bg-base-100 text-base-content antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

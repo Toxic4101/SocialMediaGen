@@ -1,0 +1,5 @@
+{
+  "name": "Cortex Commerce",
+  "description": "An AI-powered e-commerce store for digital products. This application leverages the Gemini API to dynamically generate product ideas, descriptions, and images, creating a unique and ever-changing inventory to attract customers.",
+  "requestFramePermissions": []
+}
